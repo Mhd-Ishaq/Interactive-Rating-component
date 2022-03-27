@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+}
+
+:root{
+  --Orange : hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey : hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dar-Blue: hsl(213, 19%, 18%);
+  --Ver-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+
+html{
+  font-size: 16px;
+}
+
+body{
+  font-family: 'Overpass', sans-serif;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Ver-Dark-Blue);
+  font-size: clamp(0.9rem, 3.5vw, 1rem);
+}
+
+
+.main-container{
+  width: 90%;
+  max-width: 26rem;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.25rem;
+  background-color: var(--Dar-Blue);
+
+}
+
+.rating-component{
+  width: 85%;
+  height: 85%;
+  /* display: none; */
+  
+}
+.rating-component img{
+  border-width: 10px;
+  border-radius: 50%;
+  padding: 0.8rem;
+  background-color: var(--Medium-Grey);
+}
+
+.rating-component h1,
+.thank-you-component h1{
+  margin: 1rem 0;
+  color: var(--White);
+  font-weight: 400;
+}
+
+.thank-you-component p,
+.rating-component p{
+  color: var(--Light-Grey);
+  line-height: 1.5;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem  0;
+}
+
+.buttons button{
+  width: 3.1rem;
+  height: 3rem;
+  background-color: var(--Medium-Grey);
+  color: var(--White);
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s ease-in;
+}
+
+.buttons button.active{
+  background-color: var(--Orange);
+}
+.buttons button:hover{
+  background-color: var(--Orange);
+}
+
+.submit button{
+  width: 100%;
+  background-color: var(--Orange);
+  color: var(--White);
+  padding: 15px;
+  border-radius: 20px;
+  font-weight: 700;
+  letter-spacing: 1.5;
+  transition: all 0.2s ease-in;
+}
+
+.submit button:hover{
+background-color: var(--White);
+color: var(--Orange);
+}
+
+
+
+
+
+.thank-you-component{
+  width: 85%;
+  height: 85%;
+  text-align: center;
+  display: none;
+}
+
+.thank-you-component img{
+  display: block;
+  margin: auto
+}
+
+p.message{
+  padding: 9px 10px;
+  margin-top: 1.5rem;
+  border-radius: 1.2rem;
+  background-color: var(--Medium-Grey);
+  color: var(--Orange);
+  display: inline-block;
+}
+
